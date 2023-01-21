@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FunBox Test</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="heading">Ты сегодня покормил кота?</h1>
+        <div class="cards">
+            <div class="product-card">
+                <div class="card-outside" id="card1">
+                    <div class="card-inside"  onclick="cardSelection(1)">
+                        <div class="card__content">
+                            <span class="card__top-text">
+                                Сказочное заморское явство
+                            </span>
+                            <h2 class="card__heading">Нямушка</h2>
+                            <span class="heading__subtitle">
+                                с фуа-гра
+                            </span>
+                            <ul class="card__list">
+                                <li class="card__list-item"><strong>10</strong>&nbsp;порций</li>
+                                <li class="card__list-item">мышь в подарок</li>
+                            </ul>
+                        </div>
+                        <div class="card-dot" id="dot1">
+                            <span class="product-value">0,5</span>
+                            <span class="product-value__text">кг</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-descr" id="descr1">
+                    Чего сидишь? Порадуй котэ,&nbsp;<button class="btn" onclick="cardSelection(1)">купи</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-outside" id="card2">
+                    <div class="card-inside"  onclick="cardSelection(2)">
+                        <div class="card__content">
+                            <span class="card__top-text">
+                                Сказочное заморское явство
+                            </span>
+                            <h2 class="card__heading">Нямушка</h2>
+                            <span class="heading__subtitle">
+                                с рыбой
+                            </span>
+                            <ul class="card__list">
+                                <li class="card__list-item"><strong>40</strong>&nbsp;порций</li>
+                                <li class="card__list-item"><strong>2</strong>&nbsp;мыши в подарок</li>
+                            </ul>
+                        </div>
+                        <div class="card-dot" id="dot2">
+                            <span class="product-value">2</span>
+                            <span class="product-value__text">кг</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-descr" id="descr2">
+                    Чего сидишь? Порадуй котэ,&nbsp;<button class="btn" onclick="cardSelection(2)">купи</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-outside disabled" id="card3">
+                    <div class="card-inside" onclick="cardSelection(3)">
+                        <div class="card__content">
+                            <span class="card__top-text">
+                                Сказочное заморское явство
+                            </span>
+                            <h2 class="card__heading">Нямушка</h2>
+                            <span class="heading__subtitle">
+                                с курой
+                            </span>
+                            <ul class="card__list">
+                                <li class="card__list-item"><strong>100</strong>&nbsp;порций</li>
+                                <li class="card__list-item"><strong>5</strong>&nbsp;мышей в подарок</li>
+                                <li class="card__list-item">заказчик доволен</li>
+                            </ul>
+                        </div>
+                        <div class="card-dot disabled" id="dot3">
+                            <span class="product-value">5</span>
+                            <span class="product-value__text">кг</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="card-descr disabled" id="descr3">
+                    Печалька, с курой закончился.
+                </span>
+            </div>
+            <div class="product-card">
+                <div class="card-outside disabled" id="card4">
+                    <div class="card-inside" onclick="cardSelection(3)">
+                        <div class="card__content">
+                            <span class="card__top-text">
+                                Сказочное заморское явство
+                            </span>
+                            <h2 class="card__heading">Нямушка</h2>
+                            <span class="heading__subtitle">
+                                с курой
+                            </span>
+                            <ul class="card__list">
+                                <li class="card__list-item"><strong>100</strong>&nbsp;порций</li>
+                                <li class="card__list-item"><strong>5</strong>&nbsp;мышей в подарок</li>
+                                <li class="card__list-item">заказчик доволен</li>
+                            </ul>
+                        </div>
+                        <div class="card-dot disabled" id="dot4">
+                            <span class="product-value">5</span>
+                            <span class="product-value__text">кг</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="card-descr disabled" id="descr4">
+                    Печалька, с курой закончился.
+                </span>
+            </div>
+            <div class="product-card">
+                <div class="card-outside disabled" id="card5">
+                    <div class="card-inside" onclick="cardSelection(3)">
+                        <div class="card__content">
+                            <span class="card__top-text">
+                                Сказочное заморское явство
+                            </span>
+                            <h2 class="card__heading">Нямушка</h2>
+                            <span class="heading__subtitle">
+                                с курой
+                            </span>
+                            <ul class="card__list">
+                                <li class="card__list-item"><strong>100</strong>&nbsp;порций</li>
+                                <li class="card__list-item"><strong>5</strong>&nbsp;мышей в подарок</li>
+                                <li class="card__list-item">заказчик доволен</li>
+                            </ul>
+                        </div>
+                        <div class="card-dot disabled" id="dot5">
+                            <span class="product-value">5</span>
+                            <span class="product-value__text">кг</span>
+                        </div>
+                    </div>
+                </div>
+                <span class="card-descr disabled" id="descr5">
+                    Печалька, с курой закончился.
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+   <script src="js/script.js"></script>
+</html>

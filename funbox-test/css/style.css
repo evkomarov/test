@@ -1,0 +1,385 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*::before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+a:focus,
+a:active,
+:focus,
+:focus-visible,
+:active,
+:-moz-focusring {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height:100%;
+    width:100%;
+    font-size:100%;
+    line-height:1;
+    -ms-text-size-adjust:100%;
+    -moz-text-size-adjust:100%;
+    -webkit-text-size-adjust:100%;
+}
+
+
+input,
+button,
+textarea {
+    font-family:inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding:0;
+    border:0;
+}
+
+::-moz-focusring,
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+div, p, ul, span, button {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    background-color: transparent;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    font-size:inherit;
+    font-weight: inherit;
+}
+
+@font-face {
+    font-family: "Exo";
+    src: local("Exo2.0"),
+        url("../fonts/Exo2.0-Thin.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "TrebuchetMS";
+    src: local("TrebuchetMS"),
+        url("../fonts/TrebuchetMS-Bold.woff") format("woff");
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+  }
+
+body {
+    min-width: 320px;
+    color: #1f1f1f;
+    background: #fff;
+    background-image: url(../img/pattern.png);
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.container {
+    padding: 100px;
+    text-align: center;
+}
+
+.heading {
+    margin-bottom: 48px;
+    font-family: 'Exo', Verdana, sans-serif;
+    font-weight: 300;
+    color: #fff;
+    font-size: 36pt;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    margin-right: 80px;
+    margin-bottom: 48px;
+    width: max-content;
+}
+
+.product-card:last-child {
+    margin: 0;
+}
+
+.card-outside {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    clip-path: polygon(
+    0% 10%, /* верхняя левая */ 
+    15% 0%, /* верхняя левая */ 
+    100% 0%, /* верхняя правая */ 
+    100% 0%, /* верхняя правая */
+    100% 100%, /* нижняя правая */
+    100% 100%, /* нижняя правая */ 
+    0% 100%, /* нижняя левая */ 
+    0% 100% /* нижняя левая */
+    );
+    padding: 4px 4px;
+    margin-bottom: 14px;
+    height: 488px;
+    width: 328px;
+    border-radius: 12px;
+    background-color: #2EA8E6;
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-timing-function: step-end;
+}
+
+.card-outside:last-child {
+    margin-right: 0;
+}
+
+.card-outside:hover {
+    cursor: pointer;
+    background-color: #D91667;
+}
+
+.card-outside:hover .card-dot{
+    background-color: #D91667;
+}
+
+.card-outside.selected {
+    background-color: #D91667;
+}
+
+.card-dot.selected {
+    background-color: #D91667;
+}
+
+.card-inside {
+    position: relative;
+    margin: auto;
+    padding: 10px 50px;
+    box-sizing: border-box;
+    clip-path: polygon(
+    0% 10%, /* верхняя левая */ 
+    15% 0%, /* верхняя левая */ 
+    100% 0%, /* верхняя правая */ 
+    100% 0%, /* верхняя правая */
+    100% 100%, /* нижняя правая */
+    100% 100%, /* нижняя правая */ 
+    0% 100%, /* нижняя левая */ 
+    0% 100% /* нижняя левая */
+    );
+    height: 480px;
+    width: 320px;
+    background-color: #fff;
+    background-image: url(../img/cat.png);
+    background-position: bottom left;
+    background-repeat: no-repeat;
+    border-radius: 12px;
+}
+
+.card__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.card__top-text {
+    font-family: 'TrebuchetMS', Arial, sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.card__heading {
+    font-family: 'TrebuchetMS', Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    line-height: 56px;
+    color: #000;
+
+}
+
+.heading__subtitle {
+    margin-bottom: 15px;
+    font-family: 'TrebuchetMS', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: bolder;
+    line-height: 28px;
+    color: #000;
+}
+
+.card__list {
+    list-style: none;
+    text-align: left;
+}
+
+.card__list-item {
+    font-family: 'TrebuchetMS', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #666;
+}
+
+.card__list-item strong {
+    font-family: 'TrebuchetMS', Arial, sans-serif;
+    font-weight: bolder;
+}
+
+.card-dot {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    background-color: #2EA8E6;
+    transition-property: background-color;
+    transition-duration: .3s;
+    transition-timing-function: step-end;
+}
+
+.product-value {
+    font-family: 'TrebuchetMS', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.product-value__text {
+    font-family: 'TrebuchetMS', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 100%;
+    color: #fff;
+}
+
+.card-descr {
+    font-family: 'TrebuchetMS';
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: #fff;
+}
+
+.card-outside.disabled {
+    overflow: hidden;
+}
+
+.disabled {
+    background-color: #d0d0d0;
+    pointer-events: none;
+}
+
+.disabled::after {
+    position: absolute;
+    content: "";
+    width: 328px;
+    height: 488px;
+    background-color: rgba(221, 221, 221, .5);
+    overflow: hidden;
+
+}
+
+.card-dot.disabled {
+    background-color: #d0d0d0;
+    overflow: hidden;
+}
+
+.card-descr.disabled,
+.card-descr.disabled::after {
+    background: none;
+    color: #ffff66;
+}
+
+.btn {
+    font-family: 'TrebuchetMS';
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    color: #1698d9;
+    text-decoration: underline dashed;
+}
+
+@media (max-width: 1024px) {
+
+    .container {
+        padding-top: 25px;
+    }
+
+    .product-card:nth-child(even) {
+        margin-right: 0;
+    }
+
+    .product-card:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-card {
+        margin-right: 0;
+    }
+}
